@@ -159,7 +159,8 @@
                         <td class="visible-with-data" id="atraksi_wisata">' + (feature.properties['atraksi_wisata'] !== null ? autolinker.link(String(feature.properties['atraksi_wisata']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                                               <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="images/' + String(feature.properties['foto']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
+                                               <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="images/' + feature.properties['foto'] + '" style="max-width:100%;border-radius:8px;" onerror="this.style.display=\'none\'">' : '') + '</td>\
+
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -257,6 +258,7 @@
 
     return L.marker(latlng, { icon: iconDTW });
 },
+
 
         });
         bounds_group.addLayer(layer_dtwp_babel__2);
