@@ -159,7 +159,7 @@
                         <td class="visible-with-data" id="atraksi_wisata">' + (feature.properties['atraksi_wisata'] !== null ? autolinker.link(String(feature.properties['atraksi_wisata']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                                               <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="images/+'" style="max-width:100%;border-radius:8px;" onerror="this.style.display=\'none\'">' : '') + '</td>\
+                                               <td colspan="2">' + (feature.properties['images'] !== null ? '<img src="images/+'" style="max-width:100%;border-radius:8px;" onerror="this.style.display=\'none\'">' : '') + '</td>\
 
                     </tr>\
                 </table>';
@@ -272,4 +272,5 @@
         </script>        
     </body>
 </html>
+
 
