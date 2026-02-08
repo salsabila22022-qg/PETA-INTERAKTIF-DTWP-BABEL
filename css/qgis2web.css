@@ -38,8 +38,8 @@
 			overflow-x: hidden;
         }
         .leaflet-popup-content-wrapper{
-            width: 600px !important;
-            max-width: 80vw !important;
+            width: 650px !important;
+            max-width: 90vw !important;
         }
         .leaflet-popup-content table{
             width: 100% !important;
@@ -211,6 +211,7 @@
             align-items: center;
 
         }
+
 
 
 
