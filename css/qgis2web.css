@@ -36,6 +36,7 @@
             max-height: 60vh;
 			overflow-y: auto;
 			overflow-x: hidden;
+			margin: 0 !important;
         }
         .leaflet-popup-content-wrapper{
             width: 520px !important;
@@ -218,6 +219,7 @@
             align-items: center;
 
         }
+
 
 
 
