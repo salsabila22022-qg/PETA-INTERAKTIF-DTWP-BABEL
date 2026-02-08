@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <style>
         html, body, #map {
-            width: 400%;
-            height: 300%;
+            width: 100%;
+            height: 100%;
             padding: 0;
             margin: 0;
         }
@@ -166,7 +166,7 @@
 			layer.on('popupopen', function(e) {
 				addClassToPopupIfMedia(content, e.popup);
 			});
-			layer.bindPopup(content, { maxWidth: 400, maxHeight: 300 });
+			layer.bindPopup(content, { maxWidth: 400, minWidth:500, maxHeight: 300 });
         }
 
         function style_dtwp_babel__2_0(feature) {
@@ -271,6 +271,7 @@
         </script>        
     </body>
 </html>
+
 
 
 
