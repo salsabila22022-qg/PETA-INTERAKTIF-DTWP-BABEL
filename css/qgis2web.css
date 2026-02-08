@@ -51,8 +51,9 @@
         }
         .leaflet-popup-content img{
             max-width: 100% !important;
+            max-height: 40vh; 
             height: auto !important;
-            display: block;
+			display: block;
             margin: 10px auto;
         }
         .leaflet-popup-content.media{
@@ -208,6 +209,7 @@
             align-items: center;
 
         }
+
 
 
 
