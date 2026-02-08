@@ -68,8 +68,8 @@
             min-width: 75px;
         }
         .leaflet-popup-content td img {
-            max-height: 60vh;
-            max-width: 60vw;
+            max-width: 100% !important;
+            max-height: 70vh;
         }
         .leaflet-tooltip {
             background: none;
@@ -212,6 +212,7 @@
             align-items: center;
 
         }
+
 
 
 
