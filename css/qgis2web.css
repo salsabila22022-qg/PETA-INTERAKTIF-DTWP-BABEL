@@ -51,7 +51,7 @@
             white-space: normal !important;
 			word-break: break-word !important;
             vertical-align: top !important;
-			padding-left: 6px !important;
+			padding: 6px !important;
         }
         .leaflet-popup-content img{
             max-width: 100% !important;
@@ -71,7 +71,11 @@
         }
         .leaflet-popup-content td {
             min-width: 150px;
-        }
+        } 
+        .leaflet-popup-content,
+        .leaflet-popup-content * {
+            box-sizing: border-box;
+		}
         .leaflet-tooltip {
             background: none;
             box-shadow: none;
@@ -213,6 +217,7 @@
             align-items: center;
 
         }
+
 
 
 
