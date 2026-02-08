@@ -36,7 +36,7 @@
             max-height: 60vh;
 			overflow-y: auto;
 			overflow-x: hidden;
-			padding: 12 14px !important;
+			padding: 12px 14px !important;
         }
         .leaflet-popup-content-wrapper{
             width: 520px !important;
@@ -51,7 +51,7 @@
             white-space: normal !important;
 			word-break: break-word !important;
             vertical-align: top !important;
-			padding left: 6px !important;
+			padding-left: 6px !important;
         }
         .leaflet-popup-content img{
             max-width: 100% !important;
@@ -213,6 +213,7 @@
             align-items: center;
 
         }
+
 
 
 
