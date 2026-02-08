@@ -159,14 +159,14 @@
                         <td class="visible-with-data" id="atraksi_wisata">' + (feature.properties['atraksi_wisata'] !== null ? autolinker.link(String(feature.properties['atraksi_wisata']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                       <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="' + feature.properties['foto'] + '" style="max-width:300%;max-height:300px;border-radius:8px;display:block;margin:auto;" />' : '') + '</td>\
+                       <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="' + feature.properties['foto'] + '" style="max-width:400%;max-height:300px;border-radius:8px;display:block;margin:auto;" />' : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
 				addClassToPopupIfMedia(content, e.popup);
 			});
-			layer.bindPopup(content, { maxHeight: 400 });
+			layer.bindPopup(content, { maxWidth: 400, maxHeight: 300 });
         }
 
         function style_dtwp_babel__2_0(feature) {
@@ -271,6 +271,7 @@
         </script>        
     </body>
 </html>
+
 
 
 
