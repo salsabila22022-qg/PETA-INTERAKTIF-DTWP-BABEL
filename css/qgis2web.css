@@ -36,15 +36,16 @@
             max-height: 60vh;
 			overflow-y: auto;
 			overflow-x: hidden;
-			padding: 12px 14px !important;
         }
         .leaflet-popup-content-wrapper{
             width: 520px !important;
             max-width: 80vw !important;
+			padding: 12px 14px !important;
         }
         .leaflet-popup-content table{
             width: 100% !important;
             table-layout:auto !important;
+			margin-left: 0 !important;
         }
         .leaflet-popup-content th,
         .leaflet-popup-content td{
@@ -217,6 +218,7 @@
             align-items: center;
 
         }
+
 
 
 
