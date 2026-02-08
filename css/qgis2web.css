@@ -33,7 +33,7 @@
         }
         .leaflet-popup-content{
             max-height: 70vh;
-            max-width: 70vw;
+            max-width: 95vw;
         }
         .leaflet-popup-content.media{
             width: auto!important;
@@ -193,4 +193,5 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
