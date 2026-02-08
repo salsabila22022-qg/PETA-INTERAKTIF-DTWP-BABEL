@@ -35,6 +35,22 @@
             max-height: 70vh;
             max-width: 95vw;
         }
+        .leaflet-popup-content table{
+            width: 100% !important;
+            table-layout:fixed !important;
+        }
+        .leaflet-popup-content th,
+        .leaflet-popup-content td{
+            white-space: normal !important
+			word-break: break-word !important;
+            vertical-align: top !important;
+        }
+        .leaflet-popup-content img{
+            max-width: 100% !important;
+            height: auoto !important;
+            display: block;
+            margin: 10px auto;
+        }
         .leaflet-popup-content.media{
             width: auto!important;
             height: auto!important;
@@ -195,4 +211,5 @@
             align-items: center;
 
         }
+
 
