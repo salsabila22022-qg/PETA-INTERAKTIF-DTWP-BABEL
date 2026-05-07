@@ -258,7 +258,17 @@
         popupAnchor: [0,-46]
     });
 
-    return L.marker(latlng, { icon: iconDTW });
+    var marker = L.marker(latlng, { icon: iconDTW });
+
+marker.bindTooltip(feature.properties['nama'], {
+    permanent: true,
+    direction: 'bottom',
+    offset: [0, 10],
+    className: 'label-dtw'
+});
+
+return marker;
+	return L.marker(latlng, { icon: iconDTW });
 },
 
 
