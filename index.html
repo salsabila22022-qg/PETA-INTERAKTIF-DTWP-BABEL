@@ -286,7 +286,7 @@ return marker;
 map.on('zoomend', function () {
     let currentZoom = map.getZoom();
 
-    if (Math.abs(currentZoom - lastZoom) < 2) return; // skip kalau perubahan kecil
+    if (Math.abs(currentZoom - lastZoom) < 2) return; // 
 
     lastZoom = currentZoom;
 
