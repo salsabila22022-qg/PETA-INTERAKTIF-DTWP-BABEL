@@ -108,7 +108,14 @@
             position: 'topleft'
         }).addTo(map);
         var bounds_group = new L.featureGroup([]);
-        function setBounds() {
+        function getIconSize() {
+   		var zoom = map.getZoom();
+
+    	if (zoom <= 8) return [20,25];   // 
+    	else if (zoom <= 11) return [30,40];
+    	else return [45,60];             // 
+		}
+		function setBounds() {
         }
         map.createPane('pane_OpenStreetMap_0');
         map.getPane('pane_OpenStreetMap_0').style.zIndex = 400;
@@ -253,7 +260,7 @@
 
     var iconDTW = L.icon({
         iconUrl: 'legend/' + iconFile,
-        iconSize: [40,50],
+        iconSize: getIconSize(),
         iconAnchor: [20,48],
         popupAnchor: [0,-46]
     });
@@ -274,7 +281,19 @@ return marker;
         });
         bounds_group.addLayer(layer_dtwp_babel__2);
         map.addLayer(layer_dtwp_babel__2);
-        setBounds();
+        map.on('zoomend', function () {
+    layer_dtwp_babel__2.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+            layer.setIcon(L.icon({
+                iconUrl: layer.options.icon.options.iconUrl,
+                iconSize: getIconSize(),
+                iconAnchor: [20,48],
+                popupAnchor: [0,-46]
+            }));
+        }
+    });
+});
+		setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
                 return this._bounds;
