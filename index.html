@@ -161,6 +161,9 @@
                     <tr>\
                        <td colspan="2">' + (feature.properties['foto'] !== null ? '<img src="' + feature.properties['foto'] + '" class="popup-img" />' : '') + '</td>\
                     </tr>\
+					<tr>\
+                       <td colspan="2">' + (feature.properties['foto2'] !== null ? '<img src="' + feature.properties['foto2'] + '" class="popup-img" />' : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
