@@ -80,18 +80,46 @@ html, body, #map {
     margin: 0;
     padding: 0;
 }
+#filterControl {
+    position: absolute;
+    bottom: 80px;   /* biar gak nabrak search bar */
+    left: 10px;
+    z-index: 9999;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column; 
+    gap: 6px;
+}
+
+#filterControl button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #1e3a5f;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#filterControl button:hover {
+    background: #2c5a8a;
+}
 </style>
         <title></title>
     </head>
     <body>
         <div id="title">Peta Interaktif Ekowisata Bahari Bangka Belitung</div>
-		<div style="position:absolute; top:60px; left:10px; z-index:9999; background:white; padding:10px; border-radius:8px;">
+		<div id="filterControl">
     <button onclick="showCategory('all')">Semua</button>
-    <button onclick="showCategory('alamdarat')">Darat</button>
     <button onclick="showCategory('pantai')">Pantai</button>
     <button onclick="showCategory('bawahlaut')">Bawah Laut</button>
     <button onclick="showCategory('bentanglaut')">Bentang Laut</button>
-    <button onclick="showCategory('edukasibudaya')">Budaya</button>
+	<button onclick="showCategory('alamdarat')">Alam Darat</button>
+    <button onclick="showCategory('edukasibudaya')">Edukasi Budaya</button>
 </div>
 		<div id="map">
         </div>
