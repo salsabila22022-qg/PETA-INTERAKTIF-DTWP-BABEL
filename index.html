@@ -34,6 +34,17 @@
     max-width: 90%;
     text-align: center;  
 }
+	.leaflet-bottom.leaflet-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+	.leaflet-control-search {
+    pointer-events: auto;
+    width: 280px;
+}
 	.leaflet-control-search {
     z-index: 99999 !important;
 	background: white;
@@ -142,9 +153,10 @@
             }
         }
         var zoomControl = L.control.zoom({
-            position: 'topleft'
+            position: 'bottomleft'
         }).addTo(map);
-        var bounds_group = new L.featureGroup([]);
+        
+		var bounds_group = new L.featureGroup([]);
         function getIconSize() {
    		var zoom = map.getZoom();
 
@@ -321,11 +333,12 @@ return marker;
 		var searchControl = new L.Control.Search({
     layer: layer_dtwp_babel__2,
     propertyName: 'nama',
-    zoom: 15,
-    initial: false,
+    zoom: 12,
+    firstTipSubmit: true,
+	initial: false,
     hideMarkerOnCollapse: true,
 	textPlaceholder: 'Cari nama wisata...',
-	position: 'topright'
+	position: 'bottomleft'
 });
 
 map.addControl(searchControl);
