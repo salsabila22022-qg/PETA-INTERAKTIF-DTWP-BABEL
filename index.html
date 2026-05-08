@@ -241,7 +241,18 @@ html, body, #map {
         bounds_group.addLayer(layer_OK_1);
         map.addLayer(layer_OK_1);
 		function pop_dtwp_babel__2(feature, layer) {
-            var popupContent = '<table>\
+            var lat = feature.geometry.coordinates[1];
+			var lng = feature.geometry.coordinates[0];
+			var gmapsLink = "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lng;
+			var popupContent = '<tr>\
+    <td colspan="2" style="text-align:center; padding-top:10px;">\
+        <a href="' + gmapsLink + '" target="_blank" \
+        style="display:inline-block; background:#1e3a5f; color:white; padding:8px 12px; border-radius:6px; text-decoration:none;">\
+        🧭 Rute ke Lokasi\
+        </a>\
+    </td>\
+</tr>'
+				'<table>\
                     <tr>\
                         <th scope="row">Nama</th>\
                         <td class="visible-with-data" id="nama">' + (feature.properties['nama'] !== null ? autolinker.link(String(feature.properties['nama']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
