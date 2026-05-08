@@ -372,16 +372,6 @@ return marker;
         weight: 2
     }).addTo(map);
 }
-        L.circleMarker(latlng, {
-            radius: 10,
-            color: "#FFD700",
-            fillColor: "#FFD700",
-            fillOpacity: 0.9,
-            weight: 2
-        }).addTo(map);
-    }
-});
-
 map.addControl(searchControl);
 setTimeout(() => {
     if (searchControl.expand) {
