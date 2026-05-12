@@ -280,11 +280,11 @@ html, body, #map {
                        <td colspan="2">' + (feature.properties['foto2'] !== null ? '<img src="' + feature.properties['foto2'] + '" class="popup-img" />' : '') + '</td>\
                     </tr>\
                 	<tr>\
-    					<td colspan="2" style="text-align:center; padding-top:10px;">\
-       				 <tr>\
-                        <th scope="row">Ketentuan dan Larangan</th>\
+                    	<th scope="row">Ketentuan dan Larangan</th>\
                         <td class="visible-with-data" id="ketentuan_larangan">' + (feature.properties['ketentuan_larangan'] !== null ? autolinker.link(String(feature.properties['kabupaten_kota']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                	<tr>\
+    					<td colspan="2" style="text-align:center; padding-top:10px;">\
 					<a href="' + gmapsLink + '" target="_blank" \
         				style="display:inline-block; background:#34A853; color:#F1FA00 !important; padding:8px 12px; border-radius:6px; text-decoration:none;">\
         				🧭 Rute ke Lokasi\
