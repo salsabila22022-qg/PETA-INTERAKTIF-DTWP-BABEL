@@ -246,12 +246,16 @@ html, body, #map {
 			var gmapsLink = "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lng;
 			var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nama</th>\
+                        <th scope="row">Nama DTW</th>\
                         <td class="visible-with-data" id="nama">' + (feature.properties['nama'] !== null ? autolinker.link(String(feature.properties['nama']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kabupaten/Kota</th>\
                         <td class="visible-with-data" id="kabupaten_kota">' + (feature.properties['kabupaten_kota'] !== null ? autolinker.link(String(feature.properties['kabupaten_kota']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+					<tr>\
+                        <th scope="row">Kategori/Kawasan</th>\
+                        <td class="visible-with-data" id="kategori_kawasan">' + (feature.properties['kategori_kawasan'] !== null ? autolinker.link(String(feature.properties['kabupaten_kota']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Jenis Wisata</th>\
@@ -262,7 +266,7 @@ html, body, #map {
                         <td class="visible-with-data" id="deskripsi">' + (feature.properties['deskripsi'] !== null ? autolinker.link(String(feature.properties['deskripsi']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Daya Tarik Wisata</th>\
+                        <th scope="row">Nilai Penting</th>\
                         <td class="visible-with-data" id="daya_tarik_wisata">' + (feature.properties['daya_tarik_wisata'] !== null ? autolinker.link(String(feature.properties['daya_tarik_wisata']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -277,7 +281,11 @@ html, body, #map {
                     </tr>\
                 	<tr>\
     					<td colspan="2" style="text-align:center; padding-top:10px;">\
-       				 <a href="' + gmapsLink + '" target="_blank" \
+       				 <tr>\
+                        <th scope="row">Ketentuan dan Larangan</th>\
+                        <td class="visible-with-data" id="ketentuan_larangan">' + (feature.properties['ketentuan_larangan'] !== null ? autolinker.link(String(feature.properties['kabupaten_kota']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+					<a href="' + gmapsLink + '" target="_blank" \
         				style="display:inline-block; background:#34A853; color:#F1FA00 !important; padding:8px 12px; border-radius:6px; text-decoration:none;">\
         				🧭 Rute ke Lokasi\
         			</a>\
