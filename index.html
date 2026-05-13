@@ -281,7 +281,7 @@ html, body, #map {
                     </tr>\
                 	<tr>\
                     	<th scope="row">Ketentuan dan Larangan</th>\
-                        <td class="visible-with-data" id="ketentuan_larangan">' + (feature.properties['ketentuan_larangan'] !== null ? autolinker.link(String(feature.properties['ketentuan_larangan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="ketentuan_larangan">' + (feature.properties['ketentuan_larangan'] !== null ? autolinker.link(String(feature.properties['ketentuan_larangan']).replace(/\n/g, "<br>").toLocaleString()) : '') + '</td>\
                     </tr>\
                 	<tr>\
     					<td colspan="2" style="text-align:center; padding-top:10px;">\
